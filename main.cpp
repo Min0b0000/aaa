@@ -5,9 +5,9 @@
 
 const float UPDATE_LATE = 1.f / 60.f;
 
-const int KEY_ROLL		= VK_SPACE;
-const int KEY_DEFAULT	= VK_LSHIFT;
-const int TARGET_KEY	= 'P';
+const int KEY_ROLL = VK_SPACE;
+const int KEY_DEFAULT = VK_LSHIFT;
+const int TARGET_KEY = 'P';
 
 #if 0
 #include "stdio.h"
@@ -20,19 +20,19 @@ const int TARGET_KEY	= 'P';
 int 
 main(int, char**)
 {
-	LARGE_INTEGER	llBaseCount;
-	LARGE_INTEGER	llCurCount;
-	LARGE_INTEGER	llFrequency;
-	LONG64 			llCallCount = 0;
-	float			fDeltaTime	= 0.f;
-	float			fAcc		= 0.f;
-	float			fAccTime	= 0.f;
-	float			fLateTime	= 0.f;
+	LARGE_INTEGER llBaseCount;
+	LARGE_INTEGER llCurCount;
+	LARGE_INTEGER llFrequency;
+	LONG64 llCallCount = 0;
+	float fDeltaTime = 0.f;
+	float fAcc = 0.f;
+	float fAccTime = 0.f;
+	float fLateTime = 0.f;
 
-	INPUT	input = { 0 };
-	bool	key_roll_down		= false;
-	bool	key_roll_down_delay = false;
-	bool	key_default_down	= false;
+	INPUT input = { 0 };
+	bool key_roll_down = false;
+	bool key_roll_down_delay = false;
+	bool key_default_down = false;
 
 	WORD sTargetKey = MapVirtualKey(LOBYTE(VkKeyScan(TARGET_KEY)), 0);
 
@@ -44,9 +44,9 @@ main(int, char**)
 
 	fLateTime = UPDATE_LATE;
 
-	input.type			= INPUT_KEYBOARD;
-	input.ki.dwFlags	= KEYEVENTF_SCANCODE;
-	input.ki.wScan		= sTargetKey;
+	input.type = INPUT_KEYBOARD;
+	input.ki.dwFlags = KEYEVENTF_SCANCODE;
+	input.ki.wScan = sTargetKey;
 
 	for (;;)
 	{
