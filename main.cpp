@@ -17,7 +17,7 @@ const int TARGET_KEY = 'P';
 #endif
 
 
-int 
+int
 main(int, char**)
 {
 	LARGE_INTEGER llBaseCount;
@@ -66,7 +66,7 @@ main(int, char**)
 						input.ki.dwFlags = KEYEVENTF_SCANCODE | KEYEVENTF_KEYUP;
 						SendInput(1, &input, sizeof(input));
 						input.ki.dwFlags = KEYEVENTF_SCANCODE;
-						Sleep(10);
+						Sleep(20);
 					}
 
 					LOG("KEY_ROLL<DOWN>", KEY_ROLL);
@@ -97,7 +97,7 @@ main(int, char**)
 				input.ki.dwFlags = KEYEVENTF_SCANCODE | KEYEVENTF_KEYUP;
 				SendInput(1, &input, sizeof(input));
 			}
-		} 
+		}
 
 		QueryPerformanceCounter(&llCurCount);
 		fDeltaTime = (float)(llCurCount.QuadPart - llBaseCount.QuadPart)
@@ -111,10 +111,10 @@ main(int, char**)
 		if (1.f <= fAcc)
 		{
 			llCallCount = 0;
-			fAcc		= 0.f;
+			fAcc = 0.f;
 		}
-	} 
-	
+	}
+
 lb_end:
 	return 0;
 }
