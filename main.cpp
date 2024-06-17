@@ -1,7 +1,9 @@
 #include <Windows.h>
 
 // Maybe it depends on computer environment
-// Inspired : https://youtu.be/3z8Brq7Hb0c?si=gvwZz7yqhgivo14b
+// 환경에 따라 동작에 편차가 있을 수 있음
+// 참고영상 : https://youtu.be/3z8Brq7Hb0c?si=gvwZz7yqhgivo14b
+// 테스트 해보고 싶어서 작성됨
 
 const float UPDATE_LATE = 1.f / 60.f;
 
